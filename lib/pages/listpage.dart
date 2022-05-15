@@ -3,6 +3,7 @@ import 'package:paradise_hotel/pages/splashpage.dart';
 import 'package:paradise_hotel/widget/attractioncard.dart';
 
 import '../widget/attraction.dart';
+import '../widget/bottombarwidget.dart';
 
 class ListPage extends StatelessWidget {
   const ListPage({Key? key}) : super(key: key);
@@ -50,7 +51,7 @@ class ListPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         iconTheme: const IconThemeData(color: Colors.white),
         title: const Padding(
-          padding: EdgeInsets.only(left: 170, top: 5),
+          padding: EdgeInsets.only(left: 130, top: 5),
           child: Icon(
             Icons.pool,
             color: Colors.white,
@@ -64,10 +65,6 @@ class ListPage extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          // SizedBox(
-          //   width: 10,
-          //   height: 70,
-          // )
         ],
       ),
       body: ClipRRect(
@@ -97,25 +94,11 @@ class ListPage extends StatelessWidget {
                       );
                     }),
               ),
-              BottomBarWidget()
+              const BottomBarWidget()
             ],
           ),
         ),
       ),
     );
-  }
-}
-
-class BottomBarWidget extends StatefulWidget {
-  const BottomBarWidget({Key? key}) : super(key: key);
-
-  @override
-  State<BottomBarWidget> createState() => _BottomBarWidgetState();
-}
-
-class _BottomBarWidgetState extends State<BottomBarWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return Container();
   }
 }

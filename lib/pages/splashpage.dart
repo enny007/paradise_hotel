@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:paradise_hotel/pages/listpage.dart';
+
+import 'landingpage.dart';
 
 const Color mainThemeColor = Color(0xFF272D8D);
 
@@ -9,9 +10,9 @@ class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 4), () {
-      Navigator.of(context).pop(
+      Navigator.of(context).push(
         MaterialPageRoute(
-          builder: ((context) => const ListPage()),
+          builder: ((context) => const LandingPage()),
         ),
       );
     });
